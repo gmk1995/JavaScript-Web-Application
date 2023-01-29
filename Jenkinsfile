@@ -3,6 +3,9 @@ pipeline {
     tools {
         nodejs 'NodeJS-19.5.0'
     }
+    environment {
+        SONAR_HOST_URL = "http://3.110.40.247:9000"
+    }
     stages {
         stage('GitCheckOut') {
             steps {
@@ -17,8 +20,8 @@ pipeline {
         }
         stage('SonarQubeReport') {
             steps {
-                withSonarQubeEnv('SonarQube Server') {
-                    sh "sonar-scanner -Dsonar.projectBaseDir=path/to/project -Dsonar.properties.file=path/to/sonar-scanner.properties"
+                withSonarQubeEnv('SonarQube') {
+                    sh "sonar-scanner -Dsonar.host.url=$SONAR_HOST_URL"
                 }
             }
         }
