@@ -24,7 +24,6 @@ pipeline {
         steps {
          
             sh "sonar-scanner -Dsonar.projectBaseDir=path/to/project -Dsonar.properties.file=path/to/sonar-scanner.properties"
-            sh "npm run sonar"
         }
 
     }
