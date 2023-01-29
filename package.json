@@ -1,0 +1,15 @@
+{
+    "name": "my-app",
+    "version": "1.0.0",
+    "scripts": {
+        "sonar": "sonar-scanner",
+        "publish": "npm-publish"
+    },
+    "sonarqube": {
+        "host.url": "http://3.110.40.247:9000/",
+        "login": "admin",
+        "password": "gmk@2023"
+    },
+    "dependencies": {}
+  }
+  
